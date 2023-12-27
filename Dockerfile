@@ -1,6 +1,6 @@
 FROM nvidia/cuda:11.4.3-base-ubuntu20.04
 
-RUN DEBIAN_FRONTEND=noninteractive apt install make wget git xz-utils gcc g++ libx264-dev frei0r-plugins-dev yasm libgmp-dev libgnutls28-dev libass-dev libgme-dev libmp3lame-dev libopenjp2-7-dev libopus-dev librubberband-dev libsoxr-dev libspeex-dev libtheora-dev libvorbis-dev libvpx-dev libwebp-dev libx265-dev libxvidcore-dev libzvbi-dev libxml++2.6-dev -y
+RUN apt update && DEBIAN_FRONTEND=noninteractive apt install make wget git xz-utils gcc g++ libx264-dev frei0r-plugins-dev yasm libgmp-dev libgnutls28-dev libass-dev libgme-dev libmp3lame-dev libopenjp2-7-dev libopus-dev librubberband-dev libsoxr-dev libspeex-dev libtheora-dev libvorbis-dev libvpx-dev libwebp-dev libx265-dev libxvidcore-dev libzvbi-dev libxml++2.6-dev -y
 
 RUN git clone https://git.videolan.org/git/ffmpeg/nv-codec-headers.git && cd nv-codec-headers && make install && cd ..
 
