@@ -29,4 +29,4 @@ jobs:
         push: true
         platforms: linux/amd64
         tags: |
-            ghcr.io/${{ github.repository_owner }}/ffmpeg-cuda:6.1
+            ghcr.io/${{ github.repository_owner }}/ffmpeg:6.1-cuda
